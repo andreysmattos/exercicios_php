@@ -1,4 +1,5 @@
-<?php /* Faça um Programa que peça as 4 notas bimestrais e mostre a média. */ ?>
+<?php /* Faça um Programa que peça as 4 notas bimestrais e mostre a média. */
+//testando git ?>
 
 <form method="get" >
 	<label> Informe as notas do aluno: </label> <br/>
