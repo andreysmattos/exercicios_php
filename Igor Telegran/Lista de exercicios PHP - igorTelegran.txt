@@ -1,0 +1,21 @@
+todas as tarefas devem ser realizadas com a menor quantidade de processamento possível.
+
+1- imprimir seu nome completo com PHP.
+
+2- criar uma variável informando se o usuário pode tirar carteira de habilitação. se a sua idade for maior de 18 imprimir "maior de idade" e fazer a variável da habilitação receber "true", se não, imprimir "menor de idade" e fazer a variável da habilitação receber false
+
+3- informe o sistema operacional do seu celular. caso seja windows imprimir "fabricante microsoft", caso seja ios imprimir "fabricante apple" e caso não seja nenhuma das duas imprimir "fabricante google"
+
+4- informe um número. enquanto esse número não for divisível por 10, o número deve ser exibido e acrescentado de 1
+
+5- fazer uma mensagem ser exibida 5 vezes
+
+6- crie um array e em cada casa, coloque um letra do seu primeiro nome. utilize o foreach para percorrer o array e exibir o seu nome
+
+7- realizar a mesma tarefa anterior utilizando o seu nome completo e a função explode do php. seu nome deve ser informado em letras minusculas e ser exibido em letras maiúsculas 
+
+8- exibir apenas o ano da sua data de nascimento utilizado o Date do PHP
+
+9- exibir a data da ultima segunda-feira utilizando a função strtotime do PHP
+
+10- acressentar 4 meses da data 20/6/2017
