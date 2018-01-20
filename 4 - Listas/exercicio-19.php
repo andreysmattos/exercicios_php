@@ -101,7 +101,7 @@ if(!empty($_POST['voto'])){
 
 
 if(isset($_POST['fim'])){
-	echo '<table><tr><th> Sistema Operacional</th><th> Votos</th>	<th> % </th></tr>';
+	
 	$valores = [];
 	$sql = "SELECT * FROM so";
 
@@ -112,32 +112,35 @@ if(isset($_POST['fim'])){
 
 	$r = $stmt->fetch(PDO::FETCH_ASSOC);
 	$total = 0;
-	//print_r($conn->query($sql));
-	foreach($r as $key => $value){
-		$total += $value;
-	}
-
-	foreach($r as $key => $value){
-		if($value > 0){
-		echo "<tr>";
-		echo "<td>". $key."</td>";
-		echo "<td> ". $value ."</td>";
-		echo "<td>".por($value, $total)."</td>";
-		echo "</tr>";
+	if(max($r) > 0){
+		echo '<table><tr><th> Sistema Operacional</th><th> Votos</th>	<th> % </th></tr>';
+		//print_r($conn->query($sql));
+		foreach($r as $key => $value){
+			$total += $value;
 		}
 
+		foreach($r as $key => $value){
+			if($value > 0){
+			echo "<tr>";
+			echo "<td>". $key."</td>";
+			echo "<td> ". $value ."</td>";
+			echo "<td>".por($value, $total)."</td>";
+			echo "</tr>";
+			}
+
+		}
+		echo "</table>";
+
+		echo "<hr>Total: " . $total . "</br>";
+		//var_dump($stmt);
+			
+		echo 'O Sistema Operacional mais votado foi o '. array_search(max($r), $r) .', com '.max($r).' votos, correspondendo a '.por(max($r), $total).'% dos votos.';
+
+		//print_r($valores);
+
+
+		$sql = "UPDATE so SET windows_server = 0, unix = 0, linux = 0, netware = 0, mac_os = 0, outro = 0";
+		$conn->query($sql);
 	}
-	echo "</table>";
-
-	echo "<hr>Total: " . $total . "";
-	//var_dump($stmt);
-		
-	
-
-	//print_r($valores);
-
-
-	$sql = "UPDATE so SET windows_server = 0, unix = 0, linux = 0, netware = 0, mac_os = 0, outro = 0";
-	$conn->query($sql);
 
 }
