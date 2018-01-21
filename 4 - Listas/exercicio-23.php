@@ -58,7 +58,7 @@ $c = 0;
 
 for($i = 0; $i < 6; $i++){
 	echo "<tr>";
-	echo "<td> ".$i."</td>";
+	echo "<td> ".($i+1)."</td>";
 	echo "<td> ".$nome[$i]."</td>";
 	echo "<td> ".MB($byte[$i])."</td>";
 	echo "<td> ".porcentagem($byte[$i], array_sum($byte))."% </td>";

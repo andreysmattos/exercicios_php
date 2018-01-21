@@ -77,15 +77,6 @@ if(isset($_POST['candb'])){
 
 $total_votos = $_SESSION['cand1'] + $_SESSION['cand2'] + $_SESSION['cand3'] + $_SESSION['cand4'] + $_SESSION['candn'] + $_SESSION['candb'];
 
-
-
-
-
-
-
-
-
-
 echo "<br/>  <br/>";
 echo "O candidato  1 - José recebeu : " . $_SESSION['cand1'] ." votos.<br/>";
 echo "O candidato 2 - João recebeu : " . $_SESSION['cand2'] ." votos.<br/>";
